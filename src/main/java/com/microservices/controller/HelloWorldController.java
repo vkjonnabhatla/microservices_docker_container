@@ -11,6 +11,7 @@ public class HelloWorldController {
 
     @GetMapping("/sayHello")
     public ResponseEntity sayHello(@RequestParam String name){
+        System.out.println("Inside sayHello method");
         return new ResponseEntity("Hi "+ name +", Welcome to the world of Microservices." , HttpStatus.OK);
     }
 }
